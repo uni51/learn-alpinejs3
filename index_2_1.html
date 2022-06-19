@@ -10,8 +10,9 @@
       <button x-data="{ message: 'Hi'}" @click="alert(message)">Say Hi</button>
       <button @click="alert(message)">Say Hello</button>
     </div>
-    <!-- ↓ divタグで定義しているx-dataの外にあるから、メッセージは出ない ↓ -->
+    <!-- ↓ divタグで定義しているx-dataの外にあるから、メッセージは表示されない ↓ -->
     <button @click="alert(message)">Not Say Hello</button>
+    <!-- ↓ buttonタグの中で直接x-dataを指定しているから、メッセージは表示される ↓ -->
     <button x-data="{ message: 'Hi'}" @click="alert(message)">Say Hi</button>
   </body>
 </html>
