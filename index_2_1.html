@@ -1,0 +1,17 @@
+<html>
+  <head>
+    <script
+      defer
+      src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+  </head>
+  <body>
+    <div x-data="{ message: 'Hello' }">
+      <button x-data="{ message: 'Hi'}" @click="alert(message)">Say Hi</button>
+      <button @click="alert(message)">Say Hello</button>
+    </div>
+    <!-- ↓ divタグで定義しているx-dataの外にあるから、メッセージは出ない ↓ -->
+    <button @click="alert(message)">Not Say Hello</button>
+    <button x-data="{ message: 'Hi'}" @click="alert(message)">Say Hi</button>
+  </body>
+</html>
