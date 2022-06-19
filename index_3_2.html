@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <script
+      defer
+      src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+  </head>
+  <body>
+    <ul
+      x-data="{ users: [
+      { id: 1, first_name: '山本', last_name: '一郎' },
+      { id: 2, first_name: '木村', last_name: '二郎' },
+      { id: 3, first_name: '田中', last_name: '三郎' },
+    ] }"
+    >
+      <template x-for="user in users" :key="user.id">
+        <li x-text="user.first_name"></li>
+      </template>
+    </ul>
+  </body>
+</html>
