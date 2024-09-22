@@ -7,7 +7,10 @@
   </head>
   <body>
     <div x-data="{ message: 'Hello' }">
-      <button x-data="{ message: 'Hi'}" @click="alert(message)">Say Hi</button>
+      <!-- x-on:click と @click は同じ -->
+      <button x-data="{ message: 'Hi'}" x-on:click="alert(message)">
+        Say Hi
+      </button>
       <button @click="alert(message)">Say Hello</button>
     </div>
     <!-- ↓ divタグで定義しているx-dataの外にあるから、メッセージは表示されない ↓ -->
