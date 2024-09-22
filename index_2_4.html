@@ -1,20 +1,28 @@
+<!DOCTYPE html>
 <html>
-<head>
-  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-</head>
-<body>
+  <head>
+    <script
+      defer
+      src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+  </head>
+  <body>
+    <!-- コンポーネントのルート要素で、初期状態を定義 -->
     <div x-data="{ show: false, page: '' }">
+      <!-- ドロップダウンを表示・非表示するトグルボタン -->
       <button @click="show = !show">Dropdown</button>
 
+      <!-- ドロップダウンメニュー、showがtrueの場合に表示 -->
       <div x-show="show">
         <button @click="page = '', show = false">Home</button>
         <button @click="page = 'settings', show = false">Settings</button>
         <button @click="page = 'profile', show = false">Profile</button>
       </div>
 
+      <!-- page変数の値に応じて表示される見出し -->
       <h1 x-show="page === ''">Home</h1>
       <h1 x-show="page === 'settings'">Settings</h1>
       <h1 x-show="page === 'profile'">Profile</h1>
     </div>
-</body>
+  </body>
 </html>
