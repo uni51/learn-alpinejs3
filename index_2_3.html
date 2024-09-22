@@ -7,6 +7,7 @@
   </head>
   <body>
     <div x-data="{ first: 0, second: 0 }">
+      <!-- x-model.number にしないと文字列として扱われる -->
       <!-- lazyで、テキストフィールドからフォーカスが外れた時に、計算が行われる   -->
       <input type="number" x-model.number.lazy="first" /> +
       <input type="number" x-model.number.lazy="second" /> =
