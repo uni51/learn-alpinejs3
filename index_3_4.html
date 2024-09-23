@@ -8,7 +8,7 @@
     x-init="users = await fetchUsers()"
   >
     <template x-for="user in users" :key="user.id">
-      <li x-text="user.first_name"></li>
+      <li x-text="user.first_name + ' ' + user.last_name""></li>
     </template>
   </ul>
   <script>
