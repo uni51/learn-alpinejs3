@@ -10,6 +10,7 @@
       <button @click="page = 'home'">Home</button>
       <button @click="page = 'settings'">Settings</button>
       <button @click="page = 'profile'">Profile</button>
+      <!-- pageの最初の文字を大文字に変換し（page.charAt(0).toUpperCase()）、残りの文字列をそのまま表示しています（page.slice(1)）-->
       <h1 x-text="page.charAt(0).toUpperCase() + page.slice(1)"></h1>
     </div>
   </body>
